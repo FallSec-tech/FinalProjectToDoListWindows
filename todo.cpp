@@ -467,7 +467,9 @@ pilih_nomor:
 // Entry point program: menangani alur login dan mengarahkan ke menu To-Do.
 int main()
 {
-    SetConsoleOutputCP(CP_UTF8);
+    #ifdef _WIN32
+    else SetConsoleOutputCP(CP_UTF8);
+    #endif
     int pilih;
     bool login = false;
 
