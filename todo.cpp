@@ -1,7 +1,9 @@
 #include <iostream>
 #include <string>
 #include <limits>
+#ifdef _WIN32
 #include <windows.h>
+#endif
 using namespace std;
 
 // Array sederhana untuk menyimpan akun pengguna (maks 10 akun).
@@ -465,6 +467,7 @@ pilih_nomor:
 // Entry point program: menangani alur login dan mengarahkan ke menu To-Do.
 int main()
 {
+    SetConsoleOutputCP(CP_UTF8);
     int pilih;
     bool login = false;
 
