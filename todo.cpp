@@ -468,7 +468,7 @@ pilih_nomor:
 int main()
 {
     #ifdef _WIN32
-    else SetConsoleOutputCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
     #endif
     int pilih;
     bool login = false;
